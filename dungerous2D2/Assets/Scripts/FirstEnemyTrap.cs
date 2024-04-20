@@ -4,7 +4,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class EnemyArcherController : MonoBehaviour
+public class FirstEnemyTrap : MonoBehaviour
 {
     [SerializeField] Rigidbody2D iRig;
     [SerializeField] Transform iTra;
@@ -12,9 +12,10 @@ public class EnemyArcherController : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] GameObject weapon;
     [SerializeField] Transform firePoint;
+    [SerializeField] Transform firePoint1;
     [SerializeField] float attachDistanse;
-    [SerializeField] float reloadSpeed;
-    [SerializeField] float removeDistanse;
+    private float reloadSpeed=0.05f;
+
 
     private float reloadTime;
 
@@ -26,29 +27,30 @@ public class EnemyArcherController : MonoBehaviour
     void shoot()
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
+        Instantiate(bullet, firePoint1.position, firePoint1.rotation);
+        Destroy(gameObject, 5);
     }
     float dist(Transform a, Transform b)
     {
         float dx, dy;
         dx = a.position.x - b.position.x;
         dy = a.position.y - b.position.y;
-        return(math.sqrt(dx * dx + dy * dy));
+        return (math.sqrt(dx * dx + dy * dy));
     }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (attachDistanse>=dist(player.transform, iTra)) { if (reloadSpeed <= reloadTime) { reloadTime = 0; shoot(); } }
-        if (removeDistanse>=dist(player.transform, iTra)) { }
+        if (attachDistanse >= dist(player.transform, iTra)) { if (reloadSpeed <= reloadTime) { reloadTime = 0; shoot(); } }
         reloadTime += Time.deltaTime;
         //print(reloadTime);
-        weapon.transform.LookAt(player.transform, Vector3.left);
+        weapon.transform.Rotate(0, 0, 1.25f);
     }
     //void Update()
     //{  // Rotate the camera every frame so it keeps looking at the target  transform.LookAt(target);
 
     //    // Same as above, but setting the worldUp parameter to Vector3.left in this example turns the camera on its side
-        
+
     //}
 }
