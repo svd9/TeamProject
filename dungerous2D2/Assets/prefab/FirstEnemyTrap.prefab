@@ -105,6 +105,7 @@ MonoBehaviour:
   weapon: {fileID: 2226161133099097943}
   firePoint: {fileID: 7615569540911060344}
   firePoint1: {fileID: 177437742523385228}
+  attachTime: 5
   attachDistanse: 4
 --- !u!50 &6837477849626908648
 Rigidbody2D:

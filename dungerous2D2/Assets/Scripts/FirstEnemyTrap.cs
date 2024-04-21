@@ -13,9 +13,10 @@ public class FirstEnemyTrap : MonoBehaviour
     [SerializeField] GameObject weapon;
     [SerializeField] Transform firePoint;
     [SerializeField] Transform firePoint1;
+    [SerializeField] float attachTime;
     [SerializeField] float attachDistanse;
     private float reloadSpeed=0.05f;
-
+    private bool isAttach = false;
 
     private float reloadTime;
 
@@ -28,7 +29,7 @@ public class FirstEnemyTrap : MonoBehaviour
     {
         Instantiate(bullet, firePoint.position, firePoint.rotation);
         Instantiate(bullet, firePoint1.position, firePoint1.rotation);
-        Destroy(gameObject, 5);
+        
     }
     float dist(Transform a, Transform b)
     {
@@ -42,7 +43,8 @@ public class FirstEnemyTrap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (attachDistanse >= dist(player.transform, iTra)) { if (reloadSpeed <= reloadTime) { reloadTime = 0; shoot(); } }
+        if (attachDistanse >= dist(player.transform, iTra)) { isAttach = true; Destroy(gameObject, attachTime); }
+        if (isAttach) { if (reloadSpeed <= reloadTime) { reloadTime = 0; shoot(); } }
         reloadTime += Time.deltaTime;
         //print(reloadTime);
         weapon.transform.Rotate(0, 0, 1.25f);
