@@ -15,15 +15,20 @@ public class FirstEnemyTrap : MonoBehaviour
     [SerializeField] Transform firePoint1;
     [SerializeField] float attachTime;
     [SerializeField] float attachDistanse;
+    private GameObject i;
+    private health ihealth;
     private float reloadSpeed=0.05f;
     private bool isAttach = false;
+    private bool isActivate = false;
 
     private float reloadTime;
-
+    Collider m_Collider;
     // Start is called before the first frame update
     void Start()
     {
+        m_Collider = GetComponent<Collider>();
         player = GameObject.FindGameObjectWithTag("Player");
+        ihealth=i.GetComponent<health>();
     }
     void shoot()
     {
@@ -46,6 +51,7 @@ public class FirstEnemyTrap : MonoBehaviour
         if (attachDistanse >= dist(player.transform, iTra)) { isAttach = true; Destroy(gameObject, attachTime); }
         if (isAttach) { if (reloadSpeed <= reloadTime) { reloadTime = 0; shoot(); } }
         reloadTime += Time.deltaTime;
+        if (isAttach) { if (!isActivate) { isActivate = true; ihealth.set(100); } }
         //print(reloadTime);
         weapon.transform.Rotate(0, 0, 1.25f);
     }

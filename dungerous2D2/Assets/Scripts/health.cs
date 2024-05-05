@@ -9,6 +9,7 @@ public class health : MonoBehaviour
     [SerializeField] float maxHealth;
     [SerializeField] float minHealth = 0;
     [SerializeField] bool player;
+    [SerializeField] bool target;
     private float nowHealth;
     // Start is called before the first frame update
     void Start()
@@ -16,13 +17,17 @@ public class health : MonoBehaviour
         nowHealth = firstHealth;
     }
 
-    public void damage (int i) 
+    public void damage (float i) 
     {
         nowHealth -= i;
         if (nowHealth <= minHealth) { dead(); }
         print("damage");
     }
-    public void heal(int i)
+    public void set(float i)
+    {
+        nowHealth = i;
+    }
+    public void heal(float i)
     {
         nowHealth += i;
         if (nowHealth > maxHealth) { nowHealth = maxHealth; }
@@ -33,6 +38,10 @@ public class health : MonoBehaviour
         if (player)
         {
             SceneManager.LoadScene(0);
+        }
+        else if (target)
+        {
+            SceneManager.LoadScene(2);
         }
         else
         { 

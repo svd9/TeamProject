@@ -10,9 +10,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] Transform firePoint;
     [SerializeField] float reloadSpeed;
+    [SerializeField] float reloadInMagSpeed = 0;
+    [SerializeField] float ammoInMag = 1;
     private float reloadTime;
     private int horizontal;
     private int vertical;
+    private int outMag;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +42,7 @@ public class PlayerController : MonoBehaviour
         playerRig.velocity = new Vector2(horizontal * speed, vertical * speed);
         horizontal = 0;
         vertical = 0;
-        if (Input.GetKey(KeyCode.Mouse0)) { if (reloadSpeed <= reloadTime) { reloadTime = 0; shoot(); } }
+        if (Input.GetKey(KeyCode.Mouse0)) { if (outMag < ammoInMag) { if (reloadInMagSpeed <= reloadTime) { reloadTime = 0; shoot(); outMag += 1; } } else { if (reloadSpeed <= reloadTime) { outMag = 0; } } }
         reloadTime += Time.deltaTime;
     }
 }

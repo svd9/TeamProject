@@ -103,13 +103,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iRig: {fileID: 1154286247082247999}
   iTra: {fileID: 1116276210569556044}
-  player: {fileID: 0}
   bullet: {fileID: 8364657736567308591, guid: edb00783fc2ec2142878c0dcb5410e90, type: 3}
   weapon: {fileID: 9083847080032250981}
   firePoint: {fileID: 3754736980993368670}
   attachDistanse: 10
   reloadSpeed: 2
-  removeDistanse: 0
+  reloadInMagSpeed: 0
+  ammoInMag: 1
 --- !u!50 &1154286247082247999
 Rigidbody2D:
   serializedVersion: 4
@@ -153,6 +153,7 @@ MonoBehaviour:
   maxHealth: 10
   minHealth: 0
   player: 0
+  target: 0
 --- !u!61 &6653716290649445948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -271,7 +272,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

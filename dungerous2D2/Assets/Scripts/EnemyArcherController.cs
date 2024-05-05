@@ -14,9 +14,14 @@ public class EnemyArcherController : MonoBehaviour
     [SerializeField] Transform firePoint;
     [SerializeField] float attachDistanse;
     [SerializeField] float reloadSpeed;
-    [SerializeField] float removeDistanse;
+    [SerializeField] float reloadInMagSpeed=0;
+    [SerializeField] float ammoInMag=1;
 
     private float reloadTime;
+    private float reloadTime2;
+    private int outMag;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,8 +44,7 @@ public class EnemyArcherController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (attachDistanse>=dist(player.transform, iTra)) { if (reloadSpeed <= reloadTime) { reloadTime = 0; shoot(); } }
-        if (removeDistanse>=dist(player.transform, iTra)) { }
+        if (attachDistanse >= dist(player.transform, iTra)) { if (outMag < ammoInMag) { if (reloadInMagSpeed <= reloadTime) { reloadTime = 0; shoot(); outMag += 1; } } else { if (reloadSpeed <= reloadTime) { outMag = 0; } } }
         reloadTime += Time.deltaTime;
         //print(reloadTime);
         weapon.transform.LookAt(player.transform, Vector3.left);

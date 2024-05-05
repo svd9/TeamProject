@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3832725582481673966
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 234735358855723739, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1025257771358262109, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_Name
+      value: EnemyRocketStation
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3754736980993368670, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171381323791569460, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171381323791569460, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5171381323791569460, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5754717
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037423306462417767, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 4733610738268187373, guid: 2bfbfe9d62657ef4692d21005a923cb2, type: 3}
+    - target: {fileID: 6037423306462417767, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: ammoInMag
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037423306462417767, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: reloadSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037423306462417767, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: attachDistanse
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037423306462417767, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: reloadInMagSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
