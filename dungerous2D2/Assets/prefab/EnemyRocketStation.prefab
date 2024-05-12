@@ -17,12 +17,20 @@ PrefabInstance:
       value: EnemyRocketStation
       objectReference: {fileID: 0}
     - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.6267
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.4687
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.2101
       objectReference: {fileID: 0}
     - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.1975
       objectReference: {fileID: 0}
     - target: {fileID: 1116276210569556044, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
       propertyPath: m_LocalPosition.z
@@ -61,6 +69,10 @@ PrefabInstance:
       value: -1.35
       objectReference: {fileID: 0}
     - target: {fileID: 5171381323791569460, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+    - target: {fileID: 5171381323791569460, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
@@ -91,6 +103,14 @@ PrefabInstance:
     - target: {fileID: 6037423306462417767, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
       propertyPath: reloadInMagSpeed
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653716290649445948, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653716290649445948, guid: 107aab103e1257944bb373c4fa63ad83, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
