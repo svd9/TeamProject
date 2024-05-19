@@ -12,6 +12,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: BulletPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 1905678218168347681, guid: 040a04ed490f9284b830b4ce4a67db97, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -889732630, guid: 6ff4a41f31dac754a9586f7ebdebe19d, type: 3}
+    - target: {fileID: 1905678218168347681, guid: 040a04ed490f9284b830b4ce4a67db97, type: 3}
+      propertyPath: m_Color.b
+      value: 0.97547174
+      objectReference: {fileID: 0}
+    - target: {fileID: 1905678218168347681, guid: 040a04ed490f9284b830b4ce4a67db97, type: 3}
+      propertyPath: m_Color.g
+      value: 0.97547174
+      objectReference: {fileID: 0}
+    - target: {fileID: 1905678218168347681, guid: 040a04ed490f9284b830b4ce4a67db97, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8656323082476655185, guid: 040a04ed490f9284b830b4ce4a67db97, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
